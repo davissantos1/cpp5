@@ -6,7 +6,7 @@
 /*   By: dasimoes <dasimoes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 15:38:43 by dasimoes          #+#    #+#             */
-/*   Updated: 2026/03/18 14:49:08 by dasimoes         ###   ########.fr       */
+/*   Updated: 2026/03/22 15:06:14 by dasimoes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,14 @@ void			Bureaucrat::decrementGrade()
 		this->_grade--;
 		throw Bureaucrat::GradeTooLowException();
 	}
+}
+
+const char*	Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("Grade is too low, try again!");
+}
+
+const char*	Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("Grade is too high, try again!");
 }

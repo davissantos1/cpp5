@@ -6,7 +6,7 @@
 /*   By: dasimoes <dasimoes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 14:01:20 by dasimoes          #+#    #+#             */
-/*   Updated: 2026/03/22 11:41:32 by dasimoes         ###   ########.fr       */
+/*   Updated: 2026/03/22 15:07:25 by dasimoes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ int	main(int ac, char **av)
 		std::cout	<< "========= BUREAUCRAT << OVERLOAD TEST ========="
 					<< std::endl << std::endl; 
 		
-		std::cout << test << "I'm test" << std::endl;
-		std::cout << boss << "I'm boss" << std::endl;
+		std::cout << test << std::endl;
+		std::cout << boss << std::endl;
 
 		std::cout << std::endl;
 
