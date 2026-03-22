@@ -1,0 +1,86 @@
+
+========= FORM CREATION TEST =========
+
+Boss, bureaucrat grade 1.
+
+Joe, bureaucrat grade 150.
+
+FORM'S INFORMATION
+Name: test1
+Signed: 0
+Required Grade To Sign: 30
+Required Grade To Execute: 20
+
+FORM'S INFORMATION
+Name: test2
+Signed: 0
+Required Grade To Sign: 1
+Required Grade To Execute: 1
+
+FORM'S INFORMATION
+Name: test3
+Signed: 0
+Required Grade To Sign: 150
+Required Grade To Execute: 150
+
+FORM'S INFORMATION
+Name: Default
+Signed: 0
+Required Grade To Sign: 100
+Required Grade To Execute: 100
+
+
+========= FORM ASSIGNMENT TEST =========
+
+test1 will become test2
+
+FORM'S INFORMATION
+Name: test1
+Signed: 0
+Required Grade To Sign: 30
+Required Grade To Execute: 20
+
+FORM'S INFORMATION
+Name: test1
+Signed: 0
+Required Grade To Sign: 30
+Required Grade To Execute: 20
+
+
+========= FORM << OVERLOAD TEST =========
+
+FORM'S INFORMATION
+Name: test2
+Signed: 0
+Required Grade To Sign: 1
+Required Grade To Execute: 1
+
+FORM'S INFORMATION
+Name: Default
+Signed: 0
+Required Grade To Sign: 100
+Required Grade To Execute: 100
+
+
+========= FORM EXCEPTION TEST =========
+
+
+Boss signed Default
+
+FORM'S INFORMATION
+Name: test2
+Signed: 0
+Required Grade To Sign: 1
+Required Grade To Execute: 1
+
+FORM'S INFORMATION
+Name: Default
+Signed: 1
+Required Grade To Sign: 100
+Required Grade To Execute: 100
+
+
+========= DEFAULT HEAP DESTRUCTOR TEST =========
+
+Deleting test4...
+
