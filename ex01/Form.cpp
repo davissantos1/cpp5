@@ -6,7 +6,7 @@
 /*   By: dasimoes <dasimoes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 15:12:44 by dasimoes          #+#    #+#             */
-/*   Updated: 2026/03/22 21:03:30 by dasimoes         ###   ########.fr       */
+/*   Updated: 2026/03/22 21:17:10 by dasimoes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,12 @@ Form::Form(std::string name, int gradeToSign, int gradeToExecute):
 	_requiredGradeToSign(gradeToSign),
 	_requiredGradeToExecute(gradeToExecute),
 	_isSigned(false)
-{}
+{
+	if (gradeToSign < 1 || gradeToExecute < 1)
+		throw (GradeTooHighException());
+	if (gradeToSign > 150 || gradeToExecute > 150)
+		throw (GradeTooLowException());
+}
 
 Form::Form( const Form& other ): 
 	_name(other._name),
@@ -59,7 +64,7 @@ int			Form::getRequiredGradeToExecute() const
 	return (this->_requiredGradeToExecute);
 }
 
-bool				Form::getIsSigned()
+bool				Form::getIsSigned() const
 {
 	return (this->_isSigned);
 }
@@ -67,20 +72,19 @@ bool				Form::getIsSigned()
 void				Form::beSigned(const Bureaucrat& bureaucrat)
 {
 	int signGrade = this->_requiredGradeToSign;
-	int execGrade = this->_requiredGradeToExecute;
 	int	bureauGrade = bureaucrat.getGrade();
 
-	if (bureauGrade < signGrade && bureauGrade < execGrade)
+	if (bureauGrade <= signGrade)
 		this->_isSigned = true;
 	else
 		throw (Form::GradeTooLowException());
 }
 
-std::ostream&	operator<<(std::ostream& os, Form& form)
+std::ostream&	operator<<(std::ostream& os, const Form& form)
 {
 	os	<< "FORM'S INFORMATION" << std::endl
 		<< "Name: " << form.getName() << std::endl
-		<< "Signed: " << form.getIsSigned() << std::endl
+		<< "Signed: " << (form.getIsSigned() ? "yes" : "no") << std::endl
 		<< "Required Grade To Sign: " << form.getRequiredGradeToSign() << std::endl
 		<< "Required Grade To Execute: " << form.getRequiredGradeToExecute() << std::endl;
 	return (os);

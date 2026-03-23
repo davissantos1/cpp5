@@ -6,7 +6,7 @@
 /*   By: dasimoes <dasimoes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 14:51:23 by dasimoes          #+#    #+#             */
-/*   Updated: 2026/03/22 19:03:10 by dasimoes         ###   ########.fr       */
+/*   Updated: 2026/03/22 21:17:54 by dasimoes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class	Form
 		const std::string&	getName() const;
 		int			getRequiredGradeToSign() const;
 		int			getRequiredGradeToExecute() const;
-		bool				getIsSigned();
+		bool				getIsSigned() const;
 		void				beSigned(const Bureaucrat& bureaucrat);
 		class GradeTooHighException: public std::exception
 		{
@@ -43,6 +43,6 @@ class	Form
 		};
 };
 
-std::ostream&	operator<<(std::ostream& os, Form& form);
+std::ostream&	operator<<(std::ostream& os, const Form& form);
 
 #endif
