@@ -6,7 +6,7 @@
 /*   By: dasimoes <dasimoes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 15:12:44 by dasimoes          #+#    #+#             */
-/*   Updated: 2026/03/22 19:03:52 by dasimoes         ###   ########.fr       */
+/*   Updated: 2026/03/22 21:03:30 by dasimoes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,11 @@ bool				Form::getIsSigned()
 
 void				Form::beSigned(const Bureaucrat& bureaucrat)
 {
-	if (bureaucrat.getGrade() < this->_requiredGradeToSign)
+	int signGrade = this->_requiredGradeToSign;
+	int execGrade = this->_requiredGradeToExecute;
+	int	bureauGrade = bureaucrat.getGrade();
+
+	if (bureauGrade < signGrade && bureauGrade < execGrade)
 		this->_isSigned = true;
 	else
 		throw (Form::GradeTooLowException());
