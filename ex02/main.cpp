@@ -6,7 +6,7 @@
 /*   By: dasimoes <dasimoes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 14:01:20 by dasimoes          #+#    #+#             */
-/*   Updated: 2026/03/24 20:33:02 by dasimoes         ###   ########.fr       */
+/*   Updated: 2026/03/25 12:08:22 by dasimoes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int	main(int ac, char **av)
 		std::cout	<< "========= DEFAULT HEAP DESTRUCTOR TEST ========="
 					<< std::endl << std::endl; 
 
-		std::cout << "Deleting Bureaucrats..." << std::endl;
+		std::cout << "Deleting Forms..." << std::endl;
 		delete (tree);
 		delete (robotomization);
 		delete (pardon);
