@@ -6,19 +6,19 @@
 /*   By: dasimoes <dasimoes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 15:17:42 by dasimoes          #+#    #+#             */
-/*   Updated: 2026/03/24 19:56:19 by dasimoes         ###   ########.fr       */
+/*   Updated: 2026/03/25 10:58:26 by dasimoes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm(): 
-	AForm("Robotomy Request Form", 72, 45, "no target") {}
+	AForm("robotomy request", 72, 45, "no target") {}
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
 RobotomyRequestForm::RobotomyRequestForm( std::string target ): 
-	AForm("Robotomy Request Form", 72, 45, target) {}
+	AForm("robotomy request", 72, 45, target) {}
 
 RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm& other ):
 	AForm(other) {}

@@ -6,19 +6,19 @@
 /*   By: dasimoes <dasimoes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 15:17:42 by dasimoes          #+#    #+#             */
-/*   Updated: 2026/03/24 20:48:47 by dasimoes         ###   ########.fr       */
+/*   Updated: 2026/03/25 10:57:26 by dasimoes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm(): 
-	AForm("Shruberry Creation Form", 145, 137, "no target") {}
+	AForm("shruberry creation", 145, 137, "no target") {}
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
 ShrubberyCreationForm::ShrubberyCreationForm( std::string target ): 
-	AForm("Shruberry Creation Form", 145, 137, target) {}
+	AForm("shruberry creation", 145, 137, target) {}
 
 ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm& other ):
 	AForm(other) {}

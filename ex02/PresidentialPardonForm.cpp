@@ -6,19 +6,19 @@
 /*   By: dasimoes <dasimoes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 19:33:39 by dasimoes          #+#    #+#             */
-/*   Updated: 2026/03/24 19:37:26 by dasimoes         ###   ########.fr       */
+/*   Updated: 2026/03/25 10:58:03 by dasimoes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(): 
-	AForm("Presidential Pardon Form", 25, 5, "no target") {}
+	AForm("presidential pardon", 25, 5, "no target") {}
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
 
 PresidentialPardonForm::PresidentialPardonForm( std::string target ): 
-	AForm("Presidential Pardon Form", 25, 5, target) {}
+	AForm("presidential pardon", 25, 5, target) {}
 
 PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& other ):
 	AForm(other) {}
