@@ -6,7 +6,7 @@
 /*   By: dasimoes <dasimoes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 21:08:46 by dasimoes          #+#    #+#             */
-/*   Updated: 2026/03/25 12:05:51 by dasimoes         ###   ########.fr       */
+/*   Updated: 2026/04/07 18:35:59 by dasimoes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,27 +52,21 @@ const char*	Intern::WrongFormNameException::what() const throw()
 
 AForm*	Intern::makeForm( std::string formName, std::string targetForm )
 {
-	enum e_form input = OTHER;
-
 	AForm* (Intern::*methods[]) (std::string) = {
 		&Intern::makeShrubbery,
 		&Intern::makeRobotomy,
 		&Intern::makePardon
 	};
-	
-	input = ("shrubbery creation" == formName) ? SHRUBBERY : input;
-	input = ("robotomy request" == formName) ? ROBOTOMY : input;
-	input = ("presidential pardon" == formName) ? PARDON : input;
 
-	switch (input)
-	{
-		case SHRUBBERY:
-			return (this->*methods[SHRUBBERY])(targetForm);
-		case ROBOTOMY:
-			return (this->*methods[ROBOTOMY])(targetForm);
-		case PARDON:
-			return (this->*methods[PARDON])(targetForm);
-		default:
-			throw (Intern::WrongFormNameException());
-	}
+	std::string	forms[] = {
+	"shrubbery creation",
+	"robotomy request",
+    "presidential pardon"
+	};
+	
+	for (int i = 0; i < 4; i++)
+		if (forms[i] == formName)
+			return (this->*methods[i])(targetForm);
+
+	throw(Intern::WrongFormNameException());
 }
