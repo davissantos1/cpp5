@@ -6,7 +6,7 @@
 /*   By: dasimoes <dasimoes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 21:02:25 by dasimoes          #+#    #+#             */
-/*   Updated: 2026/03/25 12:04:46 by dasimoes         ###   ########.fr       */
+/*   Updated: 2026/04/07 21:23:05 by dasimoes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,6 @@
 # include "ShrubberyCreationForm.hpp"
 # include "RobotomyRequestForm.hpp"
 # include "PresidentialPardonForm.hpp"
-
-enum	e_form
-{
-	SHRUBBERY,
-	ROBOTOMY,
-	PARDON,
-	OTHER
-};
 
 class	Intern
 {
